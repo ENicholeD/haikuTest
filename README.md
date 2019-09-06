@@ -6,19 +6,27 @@
 
 ## Description
 
-A haiku is a poem that consists of three lines. The first has five syllables, the second has seven, and the third has five. Start by creating an application that checks whether a poem is in fact a haiku. If you have time, build out your application so that it can randomly generate haikus.
+A haiku is a poem that consists of three lines. The first has five syllables, the second has seven, and the third has five.
 
-This project provides an excellent opportunity for BDD with Jasmine.
 
-Your logic should verify that the poem has three lines.
-Your logic should verify English syllable rules (and exceptions) one at a time. A quick Google search will provide information on English syllable rules.
-If you successfully complete a Haiku checker, continue to build out your application to randomly generate haikus.
-Make sure you test your application for each new rule you implement.
 ## Setup/Installation Requirements
 
 * clone and run
 
-Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?
+
+## Specs
+| Behavior | input | output |
+| ---------: | :--------: | -----: |
+| checks to see if the input has 3 lines | haiku with 3 lines is given by user | true |
+| check for syllables based on syllable rules | Syl-la-ble | 3 syllables |
+| compare the first syllable list to 5 syllables | 5 = 5 | true |
+| compare the second syllable list to 7 syllables | 7 = 7 | true |
+| compare the third syllable to 5 syllables | 5 = 5 | true |
+| if all three line lengths = true, show haiku | true, true, true | haiku is shown |
+| if user input has at least one line that doesn't match the syllable rules | 6 syllables on the first line instead of 5 | false |
+| if the user input is not a haiku, it outputs a text statement | false | (user's input) " is not a haiku" |
+
+
 
 ## Known Bugs
 
@@ -38,4 +46,4 @@ Contact via github
 
 MIT
 
-Copyright (c) 2016 **erin and dom**
+Copyright (c) 2019 **erin and dom**

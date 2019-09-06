@@ -1,16 +1,16 @@
-import { pingPong } from './ping-pong';
+import { HaikuChecker } from './haiku.js';
 import $ from 'jquery';
-import 'bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
-$(document).ready(function() {
-  $('#ping-pong-form').submit(function(event) {
+
+$(document).ready(function(){
+  $("#haiku").submit(function(event){
     event.preventDefault();
-    var goal = $('#goal').val();
-    var output = pingPong(goal);
-    output.forEach(function(element) {
-      $('#solution').append("<li>" + element + "</li>");
-    });
+    let first = $("#first").val();
+    let check = new HaikuChecker(first);
+    let showThis = check.vowelCount();
+    $("#result").append("<li>"+showThis+"</li>");
+    // let second = $("#second").val();
+    // let third = $("#third").val();
   });
 });
